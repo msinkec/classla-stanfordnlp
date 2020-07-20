@@ -37,7 +37,7 @@ class NERProcessor(UDProcessor):
         idx = 0
         for i, sent in enumerate(preds):
             for j, ner_pred in enumerate(sent):
-                ner_pred = 'NER=' + ner_pred
+                ner_pred = 'NER=' + ner_pred.upper()
 
                 misc_val = misc[idx]
                 if misc_val != '_':
